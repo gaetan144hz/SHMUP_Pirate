@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class healthPowerUp : MonoBehaviour
 {
+    public float speed;
+
+    private Rigidbody2D rb;
     private PlayerHealth _playerHealth;
 
     [SerializeField] private float healIncrease;
@@ -12,6 +15,10 @@ public class healthPowerUp : MonoBehaviour
     void Start()
     {
         _playerHealth = FindObjectOfType<PlayerHealth>();
+        
+        rb = GetComponent<Rigidbody2D>();
+        
+        rb.velocity = -transform.right * speed;
     }
 
     void Update()
