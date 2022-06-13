@@ -7,6 +7,7 @@ public class BossSpawn : MonoBehaviour
     private Timer _timer;
     public GameObject KrakenPrefab;
     public Transform spwnPoint;
+    private bool bossSpawned;
     [SerializeField] private float timeToSpawn;
     
     void Start()
@@ -16,14 +17,16 @@ public class BossSpawn : MonoBehaviour
 
     void Update()
     {
-        bossSpawn();
+        if (!bossSpawned && _timer.currentTime >= timeToSpawn)
+        {
+            bossSpawn();
+        }
     }
 
     public void bossSpawn()
     {
-        if (_timer.currentTime >= timeToSpawn)
-        {
-            Instantiate(KrakenPrefab, spwnPoint.position, Quaternion.identity);
-        }
+        //timeToSpawn += 50;  
+        bossSpawned = true;
+        Instantiate(KrakenPrefab, spwnPoint.position, Quaternion.identity);
     }
 }
