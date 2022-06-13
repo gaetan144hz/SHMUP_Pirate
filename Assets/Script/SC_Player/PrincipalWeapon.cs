@@ -21,6 +21,7 @@ public class PrincipalWeapon : MonoBehaviour
     {
         currentBulletDamage = playerBulletDamage;
         currentBulletSpeed = playerBulletSpeed;
+        Debug.Log(currentBulletDamage);
     }
 
     void Update()

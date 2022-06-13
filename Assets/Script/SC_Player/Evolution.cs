@@ -12,6 +12,8 @@ public class Evolution : MonoBehaviour
     [Header("Evolution Cap")]
     public int toEvo2;
     public int toEvo3;
+    public bool canEvolve2;
+    public bool canEvolve3;
     
     [Header("Evolution Bateau")]
     public Sprite niv1;
@@ -32,27 +34,37 @@ public class Evolution : MonoBehaviour
     void Start()
     {
         _spriteRenderer.sprite = niv1;
+        canEvolve2 = true;
+        canEvolve3 = true;
     }
 
     void Update()
     {
+        if (_score.scoreCount == toEvo2 && canEvolve2 == true)
+        {
+            onEvolve2();
+        }
+
+        if (_score.scoreCount == toEvo3 && canEvolve3 == true)
+        {
+            onEvolve3();
+        }
+    }
+
+    public void onEvolve2()
+    {
+        _spriteRenderer.sprite = niv2;
+        _principalWeapon.currentBulletDamage += damageNiv2;
+        canEvolve2 = false;
+        Debug.Log(_principalWeapon.currentBulletDamage);
         
     }
 
-    public void onEvol()
+    public void onEvolve3()
     {
-        if (_score.scoreCount == toEvo2)
-        {
-            _spriteRenderer.sprite = niv2;
-            _principalWeapon.currentBulletDamage += damageNiv2;
-            Debug.Log(_principalWeapon.currentBulletDamage);
-        }
-
-        if (_score.scoreCount == toEvo3)
-        {
-            _spriteRenderer.sprite = niv3;
-            _principalWeapon.currentBulletDamage += damageNiv3;
-            Debug.Log(_principalWeapon.currentBulletDamage);
-        }
+        _spriteRenderer.sprite = niv3;
+        _principalWeapon.currentBulletDamage += damageNiv3;
+        canEvolve3 = false;
+        Debug.Log(_principalWeapon.currentBulletDamage);
     }
 }
