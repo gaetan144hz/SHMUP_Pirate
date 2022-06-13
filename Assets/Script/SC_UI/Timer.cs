@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,11 @@ public class Timer : MonoBehaviour
     void Awake()
     {
         sec = startingTime;
+    }
+
+    private void Start()
+    {
+        timeInstantiate();
     }
 
     public void timeInstantiate()
