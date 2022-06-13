@@ -133,8 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   moveUp: 0
-  rangeUp: 9
-  rangeDown: -9.25
+  rangeUp: 12.4
+  rangeDown: 5.7
 --- !u!50 &1961421699930802963
 Rigidbody2D:
   serializedVersion: 4
@@ -205,10 +205,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5367846766549367006}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9998847, w: 0.015183991}
+  m_LocalRotation: {x: 0, y: -0, z: 0.97071654, w: -0.24022788}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1961421699930802960}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 178.26}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 207.8}
