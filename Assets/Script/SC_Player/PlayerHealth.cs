@@ -11,10 +11,13 @@ public class PlayerHealth : MonoBehaviour
     private bool canDamage;
     public TextMeshProUGUI healthText;
     public GameObject deathFX;
+    public Gradient lifeGradient;
+    public SpriteRenderer spritePlayer;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        spritePlayer.color = lifeGradient.Evaluate(currentHealth / maxHealth);
         healthText.text = currentHealth.ToString();
         canDamage = true;
     }
@@ -28,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         else if (canDamage == false)
         {
             currentHealth -= damage;
+            spritePlayer.color = lifeGradient.Evaluate(currentHealth / maxHealth);
             healthText.text = currentHealth.ToString();
         }
         if (currentHealth <= 0f)
@@ -42,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
         for (int i = 0; i < heal; i++)
         {
             currentHealth++;
+            spritePlayer.color = lifeGradient.Evaluate(currentHealth / maxHealth);
             if (currentHealth >= maxHealth) //si la vie dépasse la vie max
             {
                 currentHealth = maxHealth;
@@ -57,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
         for (int i = 0; i < damage; i++)
         {
             currentHealth--;
+            spritePlayer.color = lifeGradient.Evaluate(currentHealth / maxHealth);
             healthText.text = currentHealth.ToString();
             yield return new WaitForFixedUpdate();
         }
