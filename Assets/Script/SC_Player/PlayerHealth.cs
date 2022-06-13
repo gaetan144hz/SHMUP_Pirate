@@ -6,39 +6,68 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] float maxHealth; //valeur de départ assignée à la vie
+    private float currentHealth; //vie du joueur
+    private bool canDamage;
     public TextMeshProUGUI healthText;
-
-    public float health;
-    
     public GameObject deathFX;
-    private GameObject gameOverUI;
 
-    private void Awake()
+    private void Start()
     {
-        //gameOverUI = FindObjectOfType<GameOver>();
+        currentHealth = maxHealth;
+        healthText.text = currentHealth.ToString();
+        canDamage = true;
     }
 
-    void Start()
+    public void TakeDamage(float damage) //fonction qui fait les dégats
     {
-        //gameOverUI.SetActive(false);
-        health = 100f;
-    }
-
-    void Update()
-    {
-        healthText.text = health.ToString();
-
-        if (health <= 0) 
+        if (canDamage == true)
         {
-            //gameOverUI.SetActive(true);
+            StartCoroutine(Damage(damage));
+        }
+        else if (canDamage == false)
+        {
+            currentHealth -= damage;
+            healthText.text = currentHealth.ToString();
+        }
+        if (currentHealth <= 0f)
+        {
+            currentHealth = 0f;
             Die();
         }
     }
 
-    public void TakeDamage(float enemyDamage)
+    public void Heal(float heal) //fonction qui donne de la vie
     {
-        health -= enemyDamage;
-        healthText.text = health.ToString();
+        for (int i = 0; i < heal; i++)
+        {
+            currentHealth++;
+            if (currentHealth >= maxHealth) //si la vie dépasse la vie max
+            {
+                currentHealth = maxHealth;
+            }
+            healthText.text = currentHealth.ToString();
+        }
+    }
+
+    public IEnumerator Damage(float damage)
+    {
+        canDamage = false;
+
+        for (int i = 0; i < damage; i++)
+        {
+            currentHealth--;
+            healthText.text = currentHealth.ToString();
+            yield return new WaitForFixedUpdate();
+        }
+
+        canDamage = true;
+        healthText.text = currentHealth.ToString();
+        if (currentHealth <= 0f)
+        {
+            currentHealth = 0f;
+            Die();
+        }
     }
 
     public void Die()

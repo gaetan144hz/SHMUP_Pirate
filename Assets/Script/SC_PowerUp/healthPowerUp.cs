@@ -23,7 +23,7 @@ public class healthPowerUp : MonoBehaviour
     {
         if (_playerHealth != null)
         {
-            _playerHealth.health += healIncrease;
+            _playerHealth.Heal(healIncrease);
             Destroy(this.gameObject,0.1f);
         }
     }
