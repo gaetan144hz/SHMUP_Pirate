@@ -780,30 +780,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
---- !u!1 &1018108997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6864289467304919370, guid: 4756450aa83e6e8498f0a6dc399815b0, type: 3}
-  m_PrefabInstance: {fileID: 6864289466146856226}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1018108998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018108997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc13ed73a098b2742aa06d9a96b6316d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KrakenPrefab: {fileID: 2913446663347058477, guid: 9e8dc7c4c93c9084e954f4c73220c51b, type: 3}
-  spwnPoint: {fileID: 0}
---- !u!4 &1018108999 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6864289467304919371, guid: 4756450aa83e6e8498f0a6dc399815b0, type: 3}
-  m_PrefabInstance: {fileID: 6864289466146856226}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1026229345
 GameObject:
   m_ObjectHideFlags: 3
@@ -1264,36 +1240,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1853630414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1853630415}
-  m_Layer: 0
-  m_Name: BossSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1853630415
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853630414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -310.16, y: -394.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1018108999}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &782580082503801365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1666,10 +1612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1191828585, guid: 4756450aa83e6e8498f0a6dc399815b0, type: 3}
-      propertyPath: currentTime
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 6864289467304919370, guid: 4756450aa83e6e8498f0a6dc399815b0, type: 3}
       propertyPath: m_Name
       value: GameManager

@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6864289467304919371}
   - component: {fileID: 1191828585}
-  - component: {fileID: 1018108998}
+  - component: {fileID: 3673291135837570309}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -390,7 +390,7 @@ MonoBehaviour:
   currentTime: 0
   startingTime: 0
   countdownText: {fileID: 6864289465964397154}
---- !u!114 &1018108998
+--- !u!114 &3673291135837570309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,4 +404,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KrakenPrefab: {fileID: 2913446663347058477, guid: 9e8dc7c4c93c9084e954f4c73220c51b, type: 3}
   spwnPoint: {fileID: 4364590584065930224}
-  timeToSpawn: 5
+  timeToSpawn: 45
