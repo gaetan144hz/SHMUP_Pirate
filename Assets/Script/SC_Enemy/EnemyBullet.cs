@@ -16,9 +16,9 @@ public class EnemyBullet : MonoBehaviour
     
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); //on récupère le component RigidBody 2D sur l'object pour y accéder
         
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speed; // avance sur l'axe rouge(transform.right axe X, l'axe vert étant transform.up axe Y) 
     }
 
     void Update()
@@ -36,15 +36,15 @@ public class EnemyBullet : MonoBehaviour
             Die(); // je détruit la balle ennemi avec la fonction Die si dessous
         }
 
-        if (col.CompareTag("limite"))
+        if (col.CompareTag("limite")) // si je compare avec la limite de la zone de jeu la bullet "meurt" Die();
         {
             Die();
         }
     }
 
-    public void Die()
+    public void Die() //fonction de mort que l'on peut appeller 
     {
-        Instantiate(dieVFX, transform.position, transform.rotation);
-        Destroy(this.gameObject);
+        Instantiate(dieVFX, transform.position, transform.rotation); //spawn du fx d 'explosion de mort 
+        Destroy(this.gameObject); //destruction de l'Object
     }
 }

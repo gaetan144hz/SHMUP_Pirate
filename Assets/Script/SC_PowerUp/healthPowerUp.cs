@@ -18,7 +18,7 @@ public class healthPowerUp : MonoBehaviour
         
         rb = GetComponent<Rigidbody2D>();
         
-        rb.velocity = -transform.up * speed;
+        rb.velocity = -transform.right * speed;
     }
 
     void Update()
