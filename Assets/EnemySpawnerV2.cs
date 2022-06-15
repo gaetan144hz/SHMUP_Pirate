@@ -22,7 +22,6 @@ public class EnemySpawnerV2 : MonoBehaviour
 
     void Start()
     {
-        spawnStart(spawnPoints[0],prefabs[0]);
         spawnStart(spawnPoints[1], prefabs[1]);
 
         StartCoroutine(spawnEnemy(marineNiv1, prefabs[0]));

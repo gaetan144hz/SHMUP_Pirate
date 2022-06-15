@@ -118,10 +118,10 @@ MonoBehaviour:
   - {fileID: 6769813383395302030}
   - {fileID: 6769813383456244719}
   - {fileID: 6769813381909319330}
-  marineNiv1: 5
-  pirateNiv1: 10
-  marineNiv2: 15
-  pirateNiv2: 20
+  marineNiv1: 10
+  pirateNiv1: 15
+  marineNiv2: 20
+  pirateNiv2: 25
 --- !u!114 &6769813382025442785
 MonoBehaviour:
   m_ObjectHideFlags: 0

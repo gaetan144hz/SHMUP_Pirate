@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 3325333578015141829, guid: ac451ff0c95776643a169605347c286a, type: 3}
   firePoint:
   - {fileID: 7452119344709843649}
-  fireRate: 1
+  fireRate: 1.5
 --- !u!114 &7879010059331310066
 MonoBehaviour:
   m_ObjectHideFlags: 0
