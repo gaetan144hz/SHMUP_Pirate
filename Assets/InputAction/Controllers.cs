@@ -41,6 +41,22 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""201f246d-4e53-42dc-8a5d-04f975326791"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""7cea66bf-966a-4bdc-ba28-4451c06f3c0c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -131,6 +147,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""spell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc753bff-00db-4853-abee-3c6d53405644"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7290f287-fc89-49f7-9971-4ddce40652cb"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -142,6 +180,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_shoot = m_player.FindAction("shoot", throwIfNotFound: true);
         m_player_spell = m_player.FindAction("spell", throwIfNotFound: true);
+        m_player_pause = m_player.FindAction("pause", throwIfNotFound: true);
+        m_player_resume = m_player.FindAction("resume", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -194,6 +234,8 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_shoot;
     private readonly InputAction m_player_spell;
+    private readonly InputAction m_player_pause;
+    private readonly InputAction m_player_resume;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -201,6 +243,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @shoot => m_Wrapper.m_player_shoot;
         public InputAction @spell => m_Wrapper.m_player_spell;
+        public InputAction @pause => m_Wrapper.m_player_pause;
+        public InputAction @resume => m_Wrapper.m_player_resume;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -219,6 +263,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @spell.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpell;
                 @spell.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpell;
                 @spell.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpell;
+                @pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @resume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
+                @resume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
+                @resume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -232,6 +282,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @spell.started += instance.OnSpell;
                 @spell.performed += instance.OnSpell;
                 @spell.canceled += instance.OnSpell;
+                @pause.started += instance.OnPause;
+                @pause.performed += instance.OnPause;
+                @pause.canceled += instance.OnPause;
+                @resume.started += instance.OnResume;
+                @resume.performed += instance.OnResume;
+                @resume.canceled += instance.OnResume;
             }
         }
     }
@@ -241,5 +297,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnSpell(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnResume(InputAction.CallbackContext context);
     }
 }

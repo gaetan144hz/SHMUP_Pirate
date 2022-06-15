@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
-    
+
+    public GameObject pauseUI;
     private Vector2 movement;
     private Controllers playerInput;
     private Rigidbody2D rb;
@@ -28,6 +29,24 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnResume(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Time.timeScale = 1f;
+            pauseUI.SetActive(false);
+        }
+    }
+
+    public void OnPause(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Time.timeScale = 0f;
+            pauseUI.SetActive(true);
+        }
     }
 
     #region Movement
