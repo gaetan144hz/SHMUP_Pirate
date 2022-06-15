@@ -167,8 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1832c6b09388f4190fa9ead6fb9d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 6790185679203921846, guid: 52046225929207b428c0183583057014, type: 3}
-  barils: {fileID: 3831982765636632723, guid: ddcaada8f95ca134dbb9bc4aff670b7a, type: 3}
+  prefabs:
+  - {fileID: 6790185679203921846, guid: 52046225929207b428c0183583057014, type: 3}
+  - {fileID: 3831982765636632723, guid: ddcaada8f95ca134dbb9bc4aff670b7a, type: 3}
   spawnPoints:
   - {fileID: 3682415333740997785}
   - {fileID: 7566711428144933627}

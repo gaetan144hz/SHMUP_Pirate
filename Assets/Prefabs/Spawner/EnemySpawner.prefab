@@ -49,11 +49,12 @@ MonoBehaviour:
     cost: 8
   - enemyPrefab: {fileID: 1312290251228500406, guid: 7cb0f0d1443f67e4bb2e69a235368992, type: 3}
     cost: 7
-  - enemyPrefab: {fileID: 5453907430154883918, guid: 3ffa5f42d1865b644897185050d1b771, type: 3}
-    cost: 4
   - enemyPrefab: {fileID: 2792711515169441161, guid: 09f079e2523f7c84a88c4e673b5b0f36, type: 3}
-    cost: 4
+    cost: 7
+  - enemyPrefab: {fileID: 5453907430154883918, guid: 3ffa5f42d1865b644897185050d1b771, type: 3}
+    cost: 7
   currWave: 1
+  waveValue: 0
   enemiesToSpawn: []
   spawnLocation: {fileID: 7323449487894531715}
   waveDuration: 43
@@ -81,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7162287891960537753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.58, y: 1.43, z: 0}
+  m_LocalPosition: {x: 0.31, y: -2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 782580083273019654}

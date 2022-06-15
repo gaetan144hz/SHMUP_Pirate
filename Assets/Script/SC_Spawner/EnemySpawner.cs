@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
    
     public List<Enemy> enemies = new List<Enemy>();
     public int currWave;
-    private int waveValue;
+    public int waveValue;
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
  
     public Transform spawnLocation;
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
  
     void FixedUpdate()
     {
-        if(spawnTimer <=0)
+        if(spawnTimer <= 0)
         {
             //spawn an enemy
             if(enemiesToSpawn.Count > 0)
@@ -66,7 +66,7 @@ public class EnemySpawner : MonoBehaviour
         //  -> if we have no points left, leave the loop
  
         List<GameObject> generatedEnemies = new List<GameObject>();
-        while(waveValue>0)
+        while(waveValue > 0)
         {
             int randEnemyId = Random.Range(0, enemies.Count);
             int randEnemyCost = enemies[randEnemyId].cost;
