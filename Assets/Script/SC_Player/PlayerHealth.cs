@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0f)
         {
             currentHealth = 0f;
-            Die();
+            Destroy(this.gameObject);
         }
     }
 
@@ -73,14 +73,14 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0f)
         {
             currentHealth = 0f;
-            Die();
+            Destroy(this.gameObject);
         }
     }
 
-    public void Die()
+    private void OnDestroy()
     {
         Instantiate(deathFX, transform.position, transform.rotation);
         gameOverUI.SetActive(true);
-        Destroy(this.gameObject);
     }
+
 }

@@ -32,6 +32,7 @@ public class PlayerBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         EnemyHealth enemyHealth = col.transform.GetComponent<EnemyHealth>();
+        BossHealth bossHealth = col.transform.GetComponent<BossHealth>();
         
         if (col.gameObject.CompareTag("limite"))
         {
@@ -42,6 +43,13 @@ public class PlayerBullet : MonoBehaviour
         {
             _score.scoreCount++;
             enemyHealth.TakeDamage(_principalWeapon.currentBulletDamage);
+            Die();
+        }
+
+        if (bossHealth != null)
+        {
+            _score.scoreCount++;
+            bossHealth.TakeDamage(_principalWeapon.currentBulletDamage);
             Die();
         }
     }
