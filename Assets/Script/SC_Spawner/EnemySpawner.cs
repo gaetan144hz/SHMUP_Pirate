@@ -16,13 +16,11 @@ public class EnemySpawner : MonoBehaviour
     private float spawnInterval;
     private float spawnTimer;
  
-    // Start is called before the first frame update
     void Start()
     {
         GenerateWave();
     }
  
-    // Update is called once per frame
     void FixedUpdate()
     {
         if(spawnTimer <=0)
