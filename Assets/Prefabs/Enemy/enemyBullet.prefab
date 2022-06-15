@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0.73109215, b: 0.6367924, a: 1}
+  m_Color: {r: 0.6603774, g: 0.6580663, b: 0.6572624, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562995710ac073c4d847340b87b7f93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 3
+  timeToDestroy: 5
 --- !u!114 &4273048106152053527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,5 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  damage: 10
+  damage: 3
   dieVFX: {fileID: 7112759526485614615, guid: 18697fa4e6c14e34cad05f026a54505d, type: 3}

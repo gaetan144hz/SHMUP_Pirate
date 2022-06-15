@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 6794257407262325051
     second: Tropical_0
+  - first:
+      213: -6679180319067079361
+    second: Tropical_3
+  - first:
+      213: 6534635145413600760
+    second: Tropical_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
