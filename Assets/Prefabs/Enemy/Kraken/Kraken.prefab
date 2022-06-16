@@ -90,12 +90,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1939200613188612151}
   - component: {fileID: 3189162735913600102}
-  - component: {fileID: 6113219185341908176}
+  - component: {fileID: 6620154012307987617}
   - component: {fileID: 424371424196999009}
   - component: {fileID: 4072227381152573502}
   - component: {fileID: 6525869947234588072}
   - component: {fileID: 6704764960625273121}
   - component: {fileID: 8390008046441199127}
+  - component: {fileID: 1638949796647775505}
   m_Layer: 0
   m_Name: Kraken
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2913446663347058477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
   m_LocalPosition: {x: 17.33, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -119,7 +120,7 @@ Transform:
   - {fileID: 3564130727581741895}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
 --- !u!212 &3189162735913600102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -171,8 +172,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6113219185341908176
-BoxCollider2D:
+--- !u!58 &6620154012307987617
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,19 +185,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.036538124, y: 1.5162694}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.34, y: 7.66}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.28, y: 1.1373886}
   serializedVersion: 2
-  m_Size: {x: 4.3710194, y: 4.6274586}
-  m_EdgeRadius: 0
+  m_Radius: 2.15
 --- !u!50 &424371424196999009
 Rigidbody2D:
   serializedVersion: 4
@@ -287,6 +278,25 @@ MonoBehaviour:
   victoireUI: {fileID: 5319707043562052314}
   deathFX: {fileID: 7112759526485614615, guid: 18697fa4e6c14e34cad05f026a54505d, type: 3}
   colorOnHit: {r: 1, g: 0, b: 0, a: 1}
+--- !u!95 &1638949796647775505
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913446663347058477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 942074bfaf37fdf4db218f6e35bdbb62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4477333186918738601
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,12 +14,13 @@ public class EnemyBullet : MonoBehaviour
     private Rigidbody2D rb;
     
     public GameObject dieVFX;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //on récupère le component RigidBody 2D sur l'object pour y accéder
         
         rb.velocity = transform.right * speed; // avance sur l'axe rouge(transform.right axe X, l'axe vert étant transform.up axe Y) 
+        Destroy(this.gameObject, 5f);
     }
 
     void Update()
@@ -32,7 +34,7 @@ public class EnemyBullet : MonoBehaviour
         
         if (playerHealth != null) // != lorsque que je collisione avec quelque chose je verifie la condition SEULEMENT SI l'object avec lequel on à colisioné contient "playerHealth" 
         {
-            playerHealth.TakeDamage(damage); // je recupère le script "playerHealth" et je vais chercher dedans la fonction "TakeDamage", je lui assige entre () les damages causés par la balle de l'ennemi
+            playerHealth.TakeDamage(damage); // je recupère le script "playerHealth" et je vais chercher dedans la fonction "TakeDamage", je lui assigne entre () les damages causés par la balle de l'ennemi
             Die(); // je détruit la balle ennemi avec la fonction Die si dessous
         }
 
