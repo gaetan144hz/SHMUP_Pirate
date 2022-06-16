@@ -435,8 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3bdd77a7f648243a3b419a73ed2587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEvo2: 10
-  toEvo3: 20
+  toEvo2: 20
+  toEvo3: 40
   canEvolve2: 0
   canEvolve3: 0
   niv1: {fileID: 6210381959533720848, guid: c9840bdca5d14eb4892c7eef32c5aba4, type: 3}

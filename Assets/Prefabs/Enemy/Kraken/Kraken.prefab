@@ -283,9 +283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3ccda45c492e94d905c5bceba3f48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 250
+  health: 400
   victoireUI: {fileID: 5319707043562052314}
   deathFX: {fileID: 7112759526485614615, guid: 18697fa4e6c14e34cad05f026a54505d, type: 3}
+  colorOnHit: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4477333186918738601
 GameObject:
   m_ObjectHideFlags: 0
