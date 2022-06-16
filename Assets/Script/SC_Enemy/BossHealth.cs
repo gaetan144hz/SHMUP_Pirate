@@ -7,7 +7,6 @@ public class BossHealth : MonoBehaviour
     public float health;
 
     public GameObject victoireUI;
-    
     public GameObject deathFX;
     
     void Start()
@@ -32,6 +31,15 @@ public class BossHealth : MonoBehaviour
     {
         Instantiate(deathFX, transform.position, transform.rotation);
         victoireUI.SetActive(true);
-        Destroy(this.gameObject);
+        componentDestroy();
+    }
+
+    public void componentDestroy()
+    {
+        Destroy(this.GetComponent<BossBullet>());
+        Destroy(this.GetComponent<SpriteRenderer>());
+        Destroy(this.GetComponent<Rigidbody2D>());
+        Destroy(this.GetComponent<BoxCollider2D>());
+        Destroy(this.GetComponent<EnemyPattern>());
     }
 }
