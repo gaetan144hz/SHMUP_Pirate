@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] float maxHealth; //valeur de départ assignée à la vie
+    [SerializeField] float maxHealth; //valeur de dï¿½part assignï¿½e ï¿½ la vie
     private float currentHealth; //vie du joueur
     private bool canDamage;
     public TextMeshProUGUI healthText;
     public GameObject deathFX;
+    public GameObject gameOverUI;
     public Gradient lifeGradient;
     public SpriteRenderer spritePlayer;
 
@@ -22,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         canDamage = true;
     }
 
-    public void TakeDamage(float damage) //fonction qui fait les dégats
+    public void TakeDamage(float damage) //fonction qui fait les dï¿½gats
     {
         if (canDamage == true)
         {
@@ -37,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0f)
         {
             currentHealth = 0f;
-            Die();
+            Destroy(this.gameObject);
         }
     }
 
@@ -47,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth++;
             spritePlayer.color = lifeGradient.Evaluate(currentHealth / maxHealth);
-            if (currentHealth >= maxHealth) //si la vie dépasse la vie max
+            if (currentHealth >= maxHealth) //si la vie dï¿½passe la vie max
             {
                 currentHealth = maxHealth;
             }
@@ -72,13 +73,14 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0f)
         {
             currentHealth = 0f;
-            Die();
+            Destroy(this.gameObject);
         }
     }
 
-    public void Die()
+    private void OnDestroy()
     {
         Instantiate(deathFX, transform.position, transform.rotation);
-        Destroy(this.gameObject);
+        gameOverUI.SetActive(true);
     }
+
 }

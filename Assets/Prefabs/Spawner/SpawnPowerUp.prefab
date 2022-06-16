@@ -175,5 +175,5 @@ MonoBehaviour:
   - {fileID: 7566711428144933627}
   - {fileID: 33097317}
   - {fileID: 303846081}
-  healthInterval: 5
-  barilsInterval: 3
+  healthInterval: 6
+  barilsInterval: 4
