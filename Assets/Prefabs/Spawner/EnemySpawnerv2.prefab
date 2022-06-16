@@ -111,8 +111,10 @@ MonoBehaviour:
   prefabs:
   - {fileID: 1961421699930802966, guid: 0361a5bbe19bb2642baa688ea8f3a165, type: 3}
   - {fileID: 1312290251228500406, guid: 7cb0f0d1443f67e4bb2e69a235368992, type: 3}
+  - {fileID: 2792711515169441161, guid: 09f079e2523f7c84a88c4e673b5b0f36, type: 3}
   - {fileID: 5453907430154883918, guid: 3ffa5f42d1865b644897185050d1b771, type: 3}
   - {fileID: 2792711515169441161, guid: 09f079e2523f7c84a88c4e673b5b0f36, type: 3}
+  - {fileID: 5453907430154883918, guid: 3ffa5f42d1865b644897185050d1b771, type: 3}
   spawnPoints:
   - {fileID: 6769813381642351628}
   - {fileID: 6769813383395302030}
@@ -134,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562995710ac073c4d847340b87b7f93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 43
+  timeToDestroy: 47
 --- !u!1 &6769813383395302031
 GameObject:
   m_ObjectHideFlags: 0

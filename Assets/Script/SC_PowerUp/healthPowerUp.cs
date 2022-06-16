@@ -28,10 +28,10 @@ public class healthPowerUp : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (_playerHealth != null)
+        if (col.gameObject.CompareTag("Player"))
         {
             _playerHealth.Heal(healIncrease);
-            Destroy(this.gameObject,0.1f);
+            Destroy(this.gameObject, 0.1f);
         }
     }
 }

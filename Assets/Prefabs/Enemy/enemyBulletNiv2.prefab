@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6275723971730106914}
   - component: {fileID: 977864421650876138}
   - component: {fileID: 9131962277552662942}
-  - component: {fileID: 6114369944904687357}
   - component: {fileID: 3258576925389470918}
   m_Layer: 0
   m_Name: enemyBulletNiv2
@@ -123,19 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &6114369944904687357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4058259671012841492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562995710ac073c4d847340b87b7f93e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToDestroy: 5
 --- !u!114 &3258576925389470918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +137,4 @@ MonoBehaviour:
   speed: 7
   damage: 5
   dieVFX: {fileID: 7112759526485614615, guid: 18697fa4e6c14e34cad05f026a54505d, type: 3}
+  splashVFX: {fileID: 1725899567722775990, guid: 44cb8af4f4c9b644588b13ce2400bf57, type: 3}

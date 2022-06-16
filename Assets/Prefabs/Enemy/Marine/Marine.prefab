@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1961421699930802960
 Transform:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d66fe18ac54224083be661c51c3db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 50
   deathFX: {fileID: 1875535743758092956, guid: abf1bab9db3f15a44abbb6c42136bf3b, type: 3}
   colorOnHit: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1961421699930802965
@@ -198,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7452119344709843649
 Transform:
   m_ObjectHideFlags: 0

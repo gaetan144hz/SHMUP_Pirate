@@ -49,10 +49,6 @@ public class Evolution : MonoBehaviour
         {
             onEvolve3();
         }
-        else
-        {
-            return;
-        }
     }
 
     public void onEvolve2()

@@ -9,9 +9,14 @@ public class BossHealth : MonoBehaviour
     public GameObject victoireUI;
     public GameObject deathFX;
     
+    public Color colorOnHit;
+    private SpriteRenderer sprite;
+    private bool canPlay;
+    
     void Start()
     {
-        
+        sprite = this.GetComponent<SpriteRenderer>();
+        canPlay = true;
     }
 
     void Update()
@@ -25,6 +30,11 @@ public class BossHealth : MonoBehaviour
     public void TakeDamage(float playerDamage)
     {
         health -= playerDamage;
+        
+        if(canPlay == true)
+        {
+            StartCoroutine(PlayDamage());
+        }
     }
 
     public void Die()
@@ -41,5 +51,15 @@ public class BossHealth : MonoBehaviour
         Destroy(this.GetComponent<Rigidbody2D>());
         Destroy(this.GetComponent<BoxCollider2D>());
         Destroy(this.GetComponent<EnemyPattern>());
+    }
+    
+    public IEnumerator PlayDamage()
+    {
+        canPlay = false;
+        var baseColor = sprite.color;
+        sprite.color = colorOnHit;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = baseColor;
+        canPlay = true;
     }
 }

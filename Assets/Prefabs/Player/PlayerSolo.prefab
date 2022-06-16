@@ -174,7 +174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 258759673925215454}
   - component: {fileID: 258759673925215453}
-  - component: {fileID: 258759673925215452}
   - component: {fileID: 258759673925215451}
   - component: {fileID: 258759673925215450}
   - component: {fileID: 258759673925215449}
@@ -183,6 +182,7 @@ GameObject:
   - component: {fileID: 1221881032}
   - component: {fileID: 761970561074250204}
   - component: {fileID: 4655053771332473424}
+  - component: {fileID: 4139037408432674446}
   m_Layer: 0
   m_Name: PlayerSolo
   m_TagString: Player
@@ -262,32 +262,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &258759673925215452
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258759673925215447}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.31, y: -0.37}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.1133332, y: 3.22}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.3805733, y: 2.0619802}
-  m_EdgeRadius: 0
 --- !u!50 &258759673925215451
 Rigidbody2D:
   serializedVersion: 4
@@ -435,8 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3bdd77a7f648243a3b419a73ed2587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toEvo2: 10
-  toEvo3: 20
+  toEvo2: 20
+  toEvo3: 40
   canEvolve2: 0
   canEvolve3: 0
   niv1: {fileID: 6210381959533720848, guid: c9840bdca5d14eb4892c7eef32c5aba4, type: 3}
@@ -474,6 +448,22 @@ MonoBehaviour:
   m_DefaultActionMap: player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!58 &4139037408432674446
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258759673925215447}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.41450554, y: -0.6734089}
+  serializedVersion: 2
+  m_Radius: 1.0143178
 --- !u!1 &348102983479076552
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +859,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
